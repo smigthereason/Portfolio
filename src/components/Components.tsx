@@ -1,43 +1,42 @@
-import styled, { css } from 'styled-components';
 import backgroundImage from '../assets/silk-4916174_1280.jpg';
+import { Props } from 'react-responsive-carousel/lib/ts/components/Thumbs';
+import styled, { css } from 'styled-components';
 
-interface Props {
-  signinIn: boolean;
-}
-
+// Removed the background image and added a solid red background
 export const Background = styled.div`
   position: absolute;
   inset: 0;
-  width: 150%;
-  height: 180%;
-  object-fit: cover;
-  object-position: center;
-  background: url(${backgroundImage}) no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  // background-color: red; /* Changed to red */
+    background: url(${backgroundImage}) no-repeat center center/cover;
+  overflow: hidden; /* Ensures no overflow */
 `;
 
+// Make the container fill the page and remove unnecessary borders and shadows
 export const Container = styled.div`
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 900px;
-  max-width: 100%;
-  min-height: 550px;
+  width: 100%;
+  height: 100vh; /* Fill the entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Remove overflow */
 `;
+
+// Keep other components as they are or adjust accordingly for visual styling
+
 export const SignUpContainer = styled.div<Props>`
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
   left: 0;
-  width: 50%;
+  width: 33.33%; /* Changed from 50% to 25% */
   opacity: 0;
   z-index: 1;
   ${props => props.signinIn !== true && css`
-    transform: translateX(100%);
+    transform: translateX(50%);
     opacity: 1;
     z-index: 5;
   `}
@@ -49,13 +48,40 @@ export const SignInContainer = styled.div<Props>`
   height: 100%;
   transition: all 0.6s ease-in-out;
   left: 0;
-  width: 50%;
+  width: 33.33%; /* Changed from 50% to 25% */
   z-index: 2;
-  ${props => props.signinIn !== true && `transform: translateX(100%);`}
+  ${props => props.signinIn !== true && `transform: translateX(50%);`}
 `;
 
+export const OverlayContainer = styled.div<Props>`
+  position: absolute;
+  top: 0;
+  left: 33.33%; /* Changed from 50% to 25% */
+  width: 66.67%; /* Changed from 50% to 75% */
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  ${props => props.signinIn !== true && `transform: translateX(-50%);`}
+`;
+
+export const Overlay = styled.div<Props>`
+  background-color: #2464d1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  ${props => props.signinIn !== true && `transform: translateX(50%);`}
+`;
+
+
 export const Form = styled.form`
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,33 +134,6 @@ export const Anchor = styled.a`
   margin: 15px 0;
 `;
 
-export const OverlayContainer = styled.div<Props>`
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  transition: transform 0.6s ease-in-out;
-  z-index: 100;
-  ${props => props.signinIn !== true && `transform: translateX(-100%);`}
-`;
-
-export const Overlay = styled.div<Props>`
-  // background: -webkit-linear-gradient(to right, #2464d1, #1d9bf0);
-  // background: linear-gradient(to right, #2464d1, #1d9bf0);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
-  color: #ffffff;
-  position: relative;
-  left: -100%;
-  height: 100%;
-  width: 200%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
-  ${props => props.signinIn !== true && `transform: translateX(50%);`}
-`;
 
 export const OverlayPanel = styled.div<Props>`
   position: absolute;
@@ -164,17 +163,9 @@ export const RightOverlayPanel = styled(OverlayPanel)`
 `;
 
 export const Paragraph = styled.p`
-font-size: 14px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 20px;
   letter-spacing: 0.5px;
-  margin: 20px 0 30px
-`;
-
-export const Logo = styled.img`
-max-width: 450px;
-height: 350px
-margin: 20px
-border-radius: 10px
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0 30px;
 `;

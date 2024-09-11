@@ -1,0 +1,29 @@
+.head_line {
+    position: absolute;
+    margin-top: 20px;
+    top: 20px; 
+    /* right: 35px; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+.line {
+    width: 10%; /* Adjust width as needed */
+    height: 3px; /* Adjust height as needed */
+    background-color: rgb(169, 112, 187);
+    margin-bottom: 20px; /* Gap between the line and the text */
+    position: relative;
+    top: 15px;
+  }
+  .line2 {
+    width: 10%; /* Adjust width as needed */
+    height: 3px; /* Adjust height as needed */
+    background-color: rgb(169, 112, 187);
+    margin-bottom: 20px; /* Gap between the line and the text */
+    position: relative;
+    top: 15px;
+  }
+  .section_subtitle {
+    font-size: 20px; /* Adjust font size as needed */
+    color: #dd80dd; /* Adjust color as needed */
+  }

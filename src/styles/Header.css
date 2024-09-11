@@ -1,0 +1,87 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0); 
+  z-index: 1000;
+  padding: 0 20px;
+  height: 120px;
+  text-decoration: none;
+}
+
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  width: 50%;
+  bottom: 20px;
+}
+
+.name {
+  font-family: "Italianno", cursive;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 58px;
+  margin: 0;
+}
+
+.social-icons1 {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  right: 15px;
+  top: 22px;
+  color: #fff;
+}
+
+.social-icons  {
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icons svg:hover {
+  transform: scale(1.5);
+}
+
+.close {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.close a svg {
+  text-decoration: none; 
+  position: relative;
+  top: 20px;
+  left: 100px;
+  color: #ebebeb;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.close a:hover svg {
+  transform: scale(1.5);
+  color: #280b33;
+}
+
+.head {
+  transition: transform 0.5s ease-in-out; /* Adjust to match your AOS settings */
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
