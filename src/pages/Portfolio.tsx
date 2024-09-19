@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useNavigate } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import Omega from "../assets/logos/omega.png";
@@ -27,8 +26,7 @@ interface ExperienceCard {
 }
 
 const Portfolio: React.FC = () => {
-  const [, setSlideOut] = useState<boolean>(false);
-  const navigate = useNavigate();
+  const [] = useState<boolean>(false);
 
   useEffect(() => {
     AOS.init({
@@ -37,16 +35,7 @@ const Portfolio: React.FC = () => {
     });
   }, []);
 
-  const handleHomeRedirect = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setSlideOut(true);
-
-    setTimeout(() => {
-      navigate("/start");
-    }, 1000); // Adjust the duration to match your AOS animation duration
-  };
+  
 
   const experiences: ExperienceCard[] = [
     {
@@ -54,6 +43,7 @@ const Portfolio: React.FC = () => {
       title: "Full-Stack Developer",
       product: "Omega",
       description: [
+        "ONLINE GAMING PLATFORM",
         "Enhanced user experiences on Wink by resolving bugs & reduced load time by 40%.",
         "Built the API and database using Flask, SQLAlchemy, and Python.",
         "Refactored previous code to TypeScript.",
@@ -74,7 +64,12 @@ const Portfolio: React.FC = () => {
       logo: { type: "image", src: Logo },
       title: "Full-Stack Developer",
       product: "Kindr",
-      description: ["", "", "", "", ""],
+      description: [
+        "AUTOMATED CHARITY DONATION PLATFORM",
+        "Used React with Vite and Typescript to build the front-end design",
+         "Designed ui/ux interface using Figma",
+          "Integrate user authentication and suitable login/sign-up ",
+           "Built API and database using flask,SQLAlchemy and python", ""],
       skills: [
         "ReactJS",
         "HTML",
@@ -90,10 +85,11 @@ const Portfolio: React.FC = () => {
     {
       logo: { type: "image", src: Tune },
       title: "Frontend Engineer",
-      product: "AnimeVerse",
+      product: "TuneStream",
       description: [
-        "A Comprehensive Anime and Manga Information Portal.",
-        "Built AnimeVerse portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
+        "MUSIC STREAMING PLATFORM",
+        "",
+        "",
       ],
       skills: ["ReactJS", "HTML", "CSS", "JavaScript"],
     },
@@ -112,10 +108,11 @@ const Portfolio: React.FC = () => {
       title: "Frontend Engineer",
       product: "Korda Lavare",
       description: [
-        "A Comprehensive Anime and Manga Information Portal.",
-        "Built AnimeVerse portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
+        "LAUNDRY COMPANY WEBSITE(Clean-Hub)",
+        "Designed Graphical User Interface",
+        "Built using React Js/Vite with Typescript and Tailwind Css.",
       ],
-      skills: ["ReactJS", "HTML", "CSS", "JavaScript"],
+      skills: ["ReactJS", "HTML", "CSS", "TypeScript", "Tailwind"],
     },
   ];
 
@@ -123,7 +120,7 @@ const Portfolio: React.FC = () => {
     <>
       <div className="home-container">
         <div className="right-section">
-          <Header onHomeRedirect={handleHomeRedirect} />
+          <Header />
           <div
             className="about-container"
             data-aos="fade-up"

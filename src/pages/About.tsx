@@ -27,18 +27,6 @@ const About: React.FC = () => {
     AOS.init();
   }, []);
 
-  const handleHomeRedirect = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    document
-      .querySelector(".contact-container")
-      ?.setAttribute("data-aos", "zoom-out");
-    setTimeout(() => {
-      window.location.href = "/start"; // Redirect to the homepage after animation
-    }, 1000);
-  };
-
   return (
     <div
       className="home-container"
@@ -50,7 +38,7 @@ const About: React.FC = () => {
       {/* Added a container class for styling */}
       <div className="right-section">
         {/* Reversed: Left to Right */}
-        <Header onHomeRedirect={handleHomeRedirect} />
+        <Header />
 
         <div
           className="about-container"

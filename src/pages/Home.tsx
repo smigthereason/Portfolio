@@ -6,12 +6,9 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import "/src/styles/Home.css";
-import { useNavigate } from "react-router-dom";
-import Me2 from "../assets/50.png"
+import Me2 from "../assets/50.png";
 
 const Home: React.FC = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,20 +18,10 @@ const Home: React.FC = () => {
 
   const categories = ["Full Stack Web-Developer.", "UI/UX Designer."];
 
-  const handleHomeRedirect = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    document.querySelector(".home-container")?.classList.add("aos-animate");
-    setTimeout(() => {
-      navigate("/start");
-    }, 1000);
-  };
-
   return (
     <div className="home-container" data-aos="zoom-out">
       <div className="right-section1">
-        <Header onHomeRedirect={handleHomeRedirect} />
+        <Header />
         <div className="scrollable-container">
           <div className="home_block" data-aos="fade-up" data-aos-delay="300">
             <LineHead title="Home" />

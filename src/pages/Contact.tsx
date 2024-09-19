@@ -32,18 +32,6 @@ const Contact: React.FC = () => {
     AOS.init();
   }, []);
 
-  const handleHomeRedirect = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    document
-      .querySelector(".contact-container")
-      ?.setAttribute("data-aos", "zoom-out");
-    setTimeout(() => {
-      window.location.href = "/start"; // Redirect to the homepage after animation
-    }, 1000);
-  };
-
   return (
     <div
       className="contact-container"
@@ -51,7 +39,7 @@ const Contact: React.FC = () => {
       data-aos-duration="3000"
     >
       <div className="right-section">
-        <Header onHomeRedirect={handleHomeRedirect} />
+        <Header />
         <div className="scrollable-container">
           <div
             className="contact_block"
@@ -59,7 +47,7 @@ const Contact: React.FC = () => {
             data-aos-duration="3000"
             data-aos-delay="0"
           >
-              <LineHead title="Contact" />
+            <LineHead title="Contact" />
             <div className="section_block">
               <div className="sub_title">
                 <h3 className="section_title">
@@ -70,10 +58,7 @@ const Contact: React.FC = () => {
                 <Card
                   icon={<LocationIcon />}
                   title="Location"
-                  content={[
-                    "Nairobi, Kenya",
-                    
-                  ]}
+                  content={["Nairobi, Kenya"]}
                 />
                 <Card
                   icon={<HeartIcon />}
@@ -132,10 +117,7 @@ const Contact: React.FC = () => {
                 <Card
                   icon={<RocketIcon />}
                   title="Contact"
-                  content={[
-                    "+254 707 09 8723",
-                    "victor.dmaina@gmail.com",
-                  ]}
+                  content={["+254 707 09 8723", "victor.dmaina@gmail.com"]}
                 />
               </div>
               <div className="form_block">
