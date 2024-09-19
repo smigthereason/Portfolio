@@ -1,9 +1,9 @@
-.begin-search-button {
+.download-button {
     position: relative;
     padding: 15px 30px;
-    margin: 10px auto;
-    font-size: 18px;
-    height: 50px;
+    margin-top: 10vh;
+    font-size: 3vh;
+    height: 8vh;
     font-weight: bold;
     color: #fff;
     background-color: transparent;
@@ -15,7 +15,7 @@
     animation: bounce 2s infinite;
   }
   
-  .begin-search-button::before {
+  .download-button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -31,12 +31,12 @@
     transition: all 0.4s;
   }
   
-  .begin-search-button:hover {
-    background-color: #ece2e550;
+  .download-button:hover {
+    background-color:rgba(128, 0, 128, 0.295);
     box-shadow: 0 0 20px #ff4b4b;
   }
   
-  .begin-search-button:hover::before {
+  .download-button:hover::before {
     left: 100%;
   }
   
@@ -68,7 +68,18 @@
     }
   }
   
-  .begin-search-button {
+  .download-button {
     /* ... other styles ... */
     animation: bounce 2s infinite, glow 2s infinite alternate;
   }
+    /* Responsive Design - Media Queries */
+
+/* Larger screens, increase the space of the right section */
+@media (min-width: 1600px) {
+  .download-button {
+    margin-top: 10vh;
+    font-size: 3vh;
+    width: 18vw;
+  }
+
+}

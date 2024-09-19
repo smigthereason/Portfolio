@@ -4,7 +4,7 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  width: 80%;
+  width: 70vw;
   background-color: rgba(255, 255, 255, 0); 
   z-index: 1000;
   padding: 0 20px;
@@ -16,7 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 35vw;
 }
 
 .top-nav {
@@ -26,7 +26,7 @@ nav {
   padding: 20px;
   margin: 10px;
   position: relative;
-  width: 50%;
+  width: 25vw;
   bottom: 20px;
 }
 
@@ -34,27 +34,30 @@ nav {
   font-family: "Italianno", cursive;
   font-weight: bold;
   font-style: normal;
-  font-size: 58px;
-  margin: 0;
+  font-size: 5vw;
+  margin-top: 5vh;
 }
 
 .social-icons1 {
+  text-decoration: none;
   display: flex;
   gap: 40px;
   position: relative;
-  right: 15px;
-  top: 22px;
+  right: 5vh;
+  top: 5vh;
   color: #fff;
 }
 
 .social-icons  {
   color: #fff;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  font-size: 4vh
 }
 
 .social-icons svg:hover {
   transform: scale(1.5);
+  transition: transform 0.2s ease-in-out;
+
 }
 
 .close {
@@ -84,4 +87,48 @@ nav {
 
 .slide-left {
   transform: translateX(-100%);
+}
+
+/* Responsive Design - Media Queries */
+
+/* Larger screens, increase the space of the right section */
+@media (min-width: 1600px) {
+  .social-icons{
+    position: relative;
+    top: 0vh;
+  }
+  .social-icons svg  {
+    color: #fff;
+    cursor: pointer;
+    font-size: 4vh;
+  }
+  
+  .social-icons svg:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s ease-in-out;
+  
+  }
+}
+
+/* For smaller screens - below 1326px */
+@media (max-width: 1326px) {
+  .right-section {
+    width: 100%; /* Use full width */
+  }
+
+  .left-section img {
+    display: none; /* Hide the image on smaller screens for more content space */
+  }
+
+  .vertical-links a {
+    font-size: 4.5vw; /* Make the links larger for smaller screens */
+  }
+
+  .content-section {
+    bottom: 5vh; /* Adjust space */
+  }
+
+  .other-content {
+    top: 8vh; /* Adjust spacing */
+  }
 }

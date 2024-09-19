@@ -1,0 +1,204 @@
+/* In your Portfolio.css or a global styles file */
+/* @import "~@splidejs/splide/dist/css/splide.min.css"; */
+
+.portfolio-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.left-section {
+  width: 33.33%;
+}
+
+.portfolio {
+  color: #ffffff;
+  padding: 5vh;
+  margin-top: 5vh;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  top: 5vh;
+  flex-direction: column;
+  gap: 4rem; 
+}
+
+.experience-card {
+  position: relative;
+  text-align: center;
+  margin: 2vh 3vw; 
+  width: 55vw; 
+  padding-bottom: 4rem;
+}
+
+.card-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -15px rgba(252, 252, 252, 0.253);
+  padding-top: 4rem;
+}
+
+.logo-container {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #130219;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64ffda;
+  font-weight: bold;
+  object-fit: contain;
+}
+.logo-text {
+  position: relative;
+  top: 2vh;
+  font-size: 1.2rem;
+  height: 80px;
+  width: 80px;
+  font-weight: bold;
+  display: inline-block;
+  color: #64ffda;
+  font-weight: bold;
+  object-fit: contain;
+
+}
+h3 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+h5 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 3vh;
+  font-style: italic;
+}
+
+h4 {
+  color: #64ffda;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #a8b2d1;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.skills {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.skills strong {
+  color: #ccd6f6;
+}
+.splide {
+  position: relative;
+  bottom: 2vh;
+  height: 100vh;
+}
+
+.slides .slide1{
+  position: relative;
+  top: 30vh;
+  width: 25vw;
+  height: auto;
+  max-height: 70vh;
+}
+
+/* Styles for the second slide */
+.slides .slide2 {
+  position: relative;
+  top: 40vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles for the third slide */
+.slides .slide3 {
+  position: relative;
+  top: 45vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles for the fourth slide */
+.slides .slide4 {
+  position: relative;
+  width: 20vw;
+  height: 100vh;
+  object-fit: contain;
+  
+}
+.slides h2 {
+  font-family: "Italianno", cursive;
+  position: relative;
+  top: 35vh;
+  left: 4vw;
+  font-size: 10vh;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+  border: solid 5px #ffffff;
+  width: 25vw;
+}
+.slides h3 {
+  position: relative;
+  top: 45vh;
+  font-size: 5vh;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Responsive Design - Media Queries */
+
+/* Larger screens, increase the space of the right section */
+@media (min-width: 1600px) {
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 3vh;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    position: relative;
+    top: 2vh;
+    font-size: 2.5rem;
+  }
+}

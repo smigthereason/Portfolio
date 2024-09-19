@@ -2,65 +2,51 @@
 .home-container {
   display: flex;
   height: 100vh;
-  width: 100%;
-  overflow-y: auto;
+  width: 100vw;
+  overflow-y: hidden;
+  z-index: 100;
 }
-
-.right-section {
-  width: 100%;
-  background-color: #130219;
+.right-section1 {
+  width: 66.67%;
+  height: 100vh;
+  background-color: #1302198c;
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
   overflow-x: hidden;
   padding: 10px;
-
 }
-/* .left-section1{
-  width: 33.33%;
-  background-size: cover;
-  overflow-y: hidden;
-
+.head_line {
+  position: absolute;
+  top: 4vh; 
+  width: 65vw; 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.left-section1 img{
-  width: 100%;
-  min-height: 100vh;
-  object-fit:inherit;
-  position: relative;
-  bottom: 40px;
-} */
 
-.subscribe-btn {
+
+.title_block {
   position: relative;
-  top: 20px;
-  background-color: transparent;
-  color: #f3f3f3;
-  border: 2px solid #ebebeb;
-  padding: 10px 20px;
-  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  top: 10vh; 
+  gap: 5px;
+}
+.title_block h1{
+  font-size: 5vh;
   font-weight: bold;
-  border-radius: 30px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
-}
-
-.subscribe-btn:hover {
-  background-color: #ffffff;
-  color: #130219;
-}
-
-h1{
-  text-align: center; 
+  align-items: center;
 }
 .house {
   position: relative;
-  top:30px;
+  top:10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   padding: 20px;
-  height: 300px;
+  height: 400vh;
 }
 
 .info-box-container {
@@ -69,7 +55,7 @@ h1{
   grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
   grid-auto-rows: minmax(100px, auto);
   justify-content: space-around;
-  width: 100%;
+  width: 60vw;
   margin-bottom: 20px;
 }
 
@@ -78,7 +64,7 @@ h1{
   flex-direction: column;
   align-items: center;
   margin: 0 10px; /* Add horizontal space between info boxes */
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for the info boxes */
+  background-color: rgba(159, 67, 196, 0.281); /* Slightly transparent background for the info boxes */
   padding: 10px;
   border-radius: 10px; /* Optional: add rounded corners */
 }
@@ -91,101 +77,39 @@ h1{
   font-size: 1rem;
 }
 
-.download-cv {
-  margin-top: 20px;
-}
-
-.download-button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin-top: 20px; /* Add space above the button */
-}
-
-.download-button .arrow {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
 .home_block {
   display: grid;
   grid-auto-flow: row; /* Changed from 'column' to 'row' */
   grid-template-columns: repeat(1, 1fr); /* Creates 2 columns */
   grid-auto-rows: minmax(100px, auto);
   position: relative;
-  top: 80px;
+  top: 8vh;
   align-items: center;
 }
 
 
+  /* Responsive Design - Media Queries */
 
-.title_block {
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  top: 55px; 
-  gap: 5px;
-}
-.title_block h1{
-  font-size: 2rem;
-  font-weight: bold;
+/* Larger screens, increase the space of the right section */
+@media (min-width: 1600px) {
+  .title_block{
+    top: 12vh;
+  }
+  .title_block h1{
+    font-size: 4vh;
+    font-weight: bold;
+  }
+  .house {
+    top: 15vh;
+  }
+
+  .info-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
   
-}
-.title {
-  font-size: 1.8rem;
-  margin-left: 20px;
-  align-items: center;
-}
-
-.head_line {
-  position: absolute;
-  top: 20px; 
-  width: 100%; 
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* General slide transition styles */
-.slide-left {
-  animation: slideLeft 1.5s forwards ease-in-out;
-}
-
-.slide-right {
-  animation: slideRight 1.5s forwards ease-in-out;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(0);
+  .info-text {
+    font-size: 1.4rem;
   }
-  to {
-    transform: translateX(-100%);
-  }
-}
 
-@keyframes slideRight {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
-
-/* .hero-container {
-  position: fixed;
-  top: 0;
-  right: 100%;
-  height: 100%;
-  width: 100%;
-  transition: right 0.5s ease-in-out;
-}
-
-.hero-container.active {
-  right: 0;
-} */

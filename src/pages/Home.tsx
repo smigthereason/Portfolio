@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TypedJS from "../components/TypedJS";
@@ -7,48 +7,36 @@ import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import "/src/styles/Home.css";
 import { useNavigate } from "react-router-dom";
+import Me2 from "../assets/50.png"
 
-interface HomeProps {
-  toggle: (value: boolean) => void; // Prop for toggling the sign-in/sign-up view
-}
-
-const Home: React.FC<HomeProps> = ({ toggle }) => {
-  const [slideOut, setSlideOut] = useState<boolean>(false);
+const Home: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
   const categories = ["Full Stack Web-Developer.", "UI/UX Designer."];
 
-  const handleHomeRedirect = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleHomeRedirect = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     e.preventDefault();
-    setSlideOut(true);
-
+    document.querySelector(".home-container")?.classList.add("aos-animate");
     setTimeout(() => {
-      navigate("/"); // Change this to your Hero route
-    }, 1000); // Match AOS animation duration
+      navigate("/start");
+    }, 1000);
   };
 
   return (
-     <div className={`home-container ${slideOut ? "slide-left" : ""}`}>
-      <div className="right-section">
-        <Header onHomeRedirect={handleHomeRedirect} toggleSignIn={() => toggle(true)} /> {/* Pass the toggle function here */}
-        <div
-          className="scrollable-container"
-          style={{
-            height: "auto",
-            overflowY: "hidden",
-            padding: "10px",
-          }}
-        >
-          <div
-            className="home_block"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-delay="0"
-          >
+    <div className="home-container" data-aos="zoom-out">
+      <div className="right-section1">
+        <Header onHomeRedirect={handleHomeRedirect} />
+        <div className="scrollable-container">
+          <div className="home_block" data-aos="fade-up" data-aos-delay="300">
             <LineHead title="Home" />
             <div className="title_block">
               <h1 className="title">
@@ -73,6 +61,11 @@ const Home: React.FC<HomeProps> = ({ toggle }) => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="left-section1">
+        <div className="close">
+          <img src={Me2} alt="Me2" />
         </div>
       </div>
     </div>
