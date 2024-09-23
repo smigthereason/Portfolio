@@ -47,10 +47,9 @@ src/
 ├── vite-env.d.ts          
 ├── tsconfig.json          
 └── vite.config.ts         
+```
 
 ## Main Features
-
-```plaintext
 
 - Hero Section: An animated introduction to the portfolio, presenting core information.
 - Background Video: A fullscreen background video gives the site a dynamic feel.
@@ -59,17 +58,17 @@ src/
 - Smooth Navigation: Routing logic for seamless page transitions using React Router.
 
 ## Running the Project
+
 To get started, follow these steps:
 
+1. Install dependencies:
 
--Install dependencies:
-
-```plaintext
-
+```
 npm install
+```
 
--Run the Development Server:
+2. Run the Development Server:
 
-```plaintext
-
+```
 npm run dev
+```
