@@ -29,7 +29,7 @@ const App: React.FC = () => {
   }, [location.pathname, navigate]); // Run only when location changes
 
   if (loading && location.pathname === "/") {
-    return <Loading />; // Show Loading screen only on root path
+    return <Loading />; 
   }
 
   return (
@@ -46,13 +46,12 @@ const App: React.FC = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          objectFit: "cover", // Ensure the video covers the entire screen
-          zIndex: -1, // Ensure the video stays behind other content
+          objectFit: "cover", 
+          zIndex: -1, 
         }}
       >
         <source
           src="https://cdn.pixabay.com/video/2021/11/20/98511-649310767_large.mp4"
-          // src="https://cdn.pixabay.com/video/2024/05/22/213026_large.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
