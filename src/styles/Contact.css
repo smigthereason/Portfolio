@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap");
 .contact-container {
   display: flex;
@@ -136,6 +137,40 @@
   font-size: 16px;
   text-align: right;
 }
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+.extra { 
+  position: relative;
+  left: 2.5vw;
+  background-color: rgba(29, 22, 22, 0.507);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  height: auto;
+  max-width: 350px;
+  border-radius: 10%;
+}
+.extra p{
+  font-family: Poppins, sans-serif;
+  font-size: 3vh;
+}
+.extra h4{
+  position: relative;
+  left: 8vw;
+  font-size: 5vh;
+  font-weight: bold;
+  font-family: "Italianno", cursive;
+}
+
 
 /* Larger screens, increase the space of the right section */
 @media (min-width: 1600px) {

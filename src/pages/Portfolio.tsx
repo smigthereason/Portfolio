@@ -45,10 +45,10 @@ const Portfolio: React.FC = () => {
       description: [
         "ONLINE GAMING PLATFORM",
         "Enhanced user experiences on Wink by resolving bugs & reduced load time by 40%.",
-        "Built the API and database using Flask, SQLAlchemy, and Python.",
+        " Fetched from API and used Flask, SQLAlchemy, and Python for User-Authentication with JWT",
         "Refactored previous code to TypeScript.",
         "Created the frontend design and graphical interface using React",
-        "Integrated payment plans through PayPal for seamless transactions.",
+        "Set up a structure for Integrated payment plans.",
       ],
       skills: [
         "ReactJS",

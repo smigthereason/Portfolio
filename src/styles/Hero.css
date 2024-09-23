@@ -176,7 +176,7 @@ body, html {
 }
 
 /* For mobile devices - below 768px */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .right-section {
     width: 100%; /* Take full width */
   }
@@ -197,5 +197,8 @@ body, html {
   .tag-1 {
     padding-left: 2vw;
     font-size: 2.5vw; /* Adjust font size for mobile */
+  }
+  .left-section1 {
+    display: none;
   }
 }
