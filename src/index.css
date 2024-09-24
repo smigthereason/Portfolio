@@ -83,3 +83,41 @@ body {
   position: relative;
   bottom: 40px;
 }
+
+/* For mobile devices - below 768px */
+@media (max-width: 768px) {
+  /* Hide the left section completely */
+  .left-section1 {
+    display: none;
+  }
+
+  /* Make the right section take the full width of the screen */
+  .right-section {
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Adjust vertical links to fit nicely within the right section */
+  .vertical-links {
+    width: 80%; /* 80% of the right section */
+    margin: 10px 0; /* Center with top/bottom margin */
+  }
+
+  /* Increase font size of vertical links for better readability */
+  .vertical-links a {
+    font-size: 5vw; /* Adjust font size for mobile */
+  }
+
+  /* Adjust positioning of other content */
+  .other-content {
+    margin-top: 5vh; /* Adjust top margin to provide spacing */
+  }
+
+  /* Adjust font size and padding for .tag-1 */
+  .tag-1 {
+    padding-left: 2vw;
+    font-size: 2.5vw; /* Adjust font size for mobile */
+  }
+}

@@ -199,5 +199,18 @@
     position: relative;
     right: 8vw;
   }
+  .extra { 
+    position: relative;
+    left: 1.2vw;
+    background-color: rgba(29, 22, 22, 0.507);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    height: auto;
+    max-width: 550px;
+    border-radius: 10%;
+  }
+
+  
 
 }
