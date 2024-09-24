@@ -35,8 +35,6 @@ const Portfolio: React.FC = () => {
     });
   }, []);
 
-  
-
   const experiences: ExperienceCard[] = [
     {
       logo: { type: "image", src: Omega },
@@ -67,9 +65,11 @@ const Portfolio: React.FC = () => {
       description: [
         "AUTOMATED CHARITY DONATION PLATFORM",
         "Used React with Vite and Typescript to build the front-end design",
-         "Designed ui/ux interface using Figma",
-          "Integrate user authentication and suitable login/sign-up ",
-           "Built API and database using flask,SQLAlchemy and python", ""],
+        "Designed ui/ux interface using Figma",
+        "Integrate user authentication and suitable login/sign-up ",
+        "Built API and database using flask,SQLAlchemy and python",
+        "",
+      ],
       skills: [
         "ReactJS",
         "HTML",
@@ -87,12 +87,15 @@ const Portfolio: React.FC = () => {
       title: "Frontend Engineer",
       product: "TuneStream",
       description: [
-        "MUSIC STREAMING PLATFORM",
-        "",
-        "",
+        "Music Streaming Platform",
+        "Designed and implemented a responsive user interface using Vanilla CSS and Tailwind CSS.",
+        "Developed a seamless player sequence and integrated search functionality utilizing JavaScript.",
+        "Leveraged React to build an interactive and visually appealing frontend experience.",
+        "Created a user-friendly login page and a mockup representation for enhanced user engagement.",
       ],
-      skills: ["ReactJS", "HTML", "CSS", "JavaScript"],
+      skills: ["ReactJS", "HTML", "CSS", "JavaScript", "TailwindCSS"],
     },
+
     {
       logo: { type: "image", src: AvHighLogo },
       title: "Frontend Engineer",
