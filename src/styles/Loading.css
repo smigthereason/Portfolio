@@ -10,7 +10,7 @@
 
 h6 {
   position: relative;
-  bottom: 10vh;
+  bottom: 15vh;
   font-size: 4rem;
   font-weight: bold;
   font-family: "Italianno", cursive;
@@ -111,4 +111,11 @@ h6 {
     opacity: 0.5;
     bottom: 100%;
   }
+}
+@media (max-width: 1600px) {
+h6 {
+  position: relative;
+  bottom: 10vh;
+  
+}
 }
