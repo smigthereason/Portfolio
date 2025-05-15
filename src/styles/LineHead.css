@@ -48,3 +48,29 @@
   }
 
 }
+@media (max-width: 768px) {
+  .head_line {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .line {
+    width: 19vw;
+    height: 0.5vh;
+  }
+  .line2 {
+    width: 19vw;
+    height: 0.5vh;
+  }
+
+  .section_subtitle {
+    font-size: 4vw;
+    position: relative;
+    bottom: 0vh;
+  }
+}

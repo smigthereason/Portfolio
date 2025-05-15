@@ -87,7 +87,7 @@ body {
 /* For mobile devices - below 768px */
 @media (max-width: 768px) {
   /* Hide the left section completely */
-  .left-section1 {
+  .left-section {
     display: none;
   }
 

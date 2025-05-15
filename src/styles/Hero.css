@@ -176,39 +176,234 @@ body, html {
 }
 
 /* For mobile devices - below 768px */
+/* For mobile devices - below 768px */
 @media (max-width: 768px) {
-  /* Hide the left section completely */
-  .left-section1 {
+  /* Allow scrolling on mobile */
+  body, html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Adjust main container for mobile view */
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  /* Hide the left section properly */
+  .left-section {
+    display: none;
+  }
+  
+  /* Make the right section take the full width and optimize layout */
+  .right-section {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(19, 2, 25, 0.9); /* Slightly darker for better mobile readability */
+  }
+  /* Background video adjustments */
+  .background-video {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Optimize content section layout */
+  .content-section {
+    flex-direction: column;
+    bottom: 0;
+    padding: 5vh 0;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+  }
+  
+  /* Vertical links adjustments */
+  .vertical-links {
+    width: 90%;
+    margin: 0;
+    padding: 4vh 0;
+    align-items: center;
+    top: 0;
+    position: relative;
+  }
+  
+  .vertical-links a {
+    font-size: 7vw;
+    margin-bottom: 3vh;
+    text-align: center;
+    padding: 1vh 0;
+  }
+  
+  /* Other content adjustments */
+  .other-content {
+    width: 90%;
+    text-align: center;
+    padding: 0;
+    margin-top: 2vh;
+    top: 0;
+    position: relative;
+  }
+  
+  .other-content p {
+    font-size: 4vw;
+    padding: 1vh 0;
+  }
+  
+  /* Tag adjustments */
+  .tag-1 {
+    width: 90%;
+    padding: 2vh 0;
+    font-size: 3vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+
+/* Base styles */
+.desktop-hero-container,
+.mobile-hero-container {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Desktop Hero Styles */
+.desktop-hero-container {
+  display: flex;
+  /* Your existing desktop hero styles */
+}
+
+/* Mobile Hero Styles */
+.mobile-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1302198c;
+  min-height: 100vh;
+  padding: 0rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+/* Responsiveness - Hide/Show based on screen size */
+@media (max-width: 767px) {
+  .desktop-hero-container {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-hero-container {
     display: none;
   }
 
-  /* Make the right section take the full width of the screen */
-  .right-section {
-    width: 100vw; /* Full width of the viewport */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center items horizontally */
-  }
-
-  /* Adjust vertical links to fit nicely within the right section */
-  .vertical-links {
-    width: 80%; /* 80% of the right section */
-    margin: 10px 0; /* Center with top/bottom margin */
-  }
-
-  /* Increase font size of vertical links for better readability */
-  .vertical-links a {
-    font-size: 5vw; /* Adjust font size for mobile */
-  }
-
-  /* Adjust positioning of other content */
-  .other-content {
-    margin-top: 5vh; /* Adjust top margin to provide spacing */
-  }
-
-  /* Adjust font size and padding for .tag-1 */
-  .tag-1 {
-    padding-left: 2vw;
-    font-size: 2.5vw; /* Adjust font size for mobile */
-  }
 }
+
+
+
+
+/* Profile Card */
+.profile-card {
+  width: 100%;
+  max-width: 350px;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  padding: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  
+}
+
+.profile-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4070f4;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-name {
+  margin: 0;
+  font-size: 3vh;
+  font-weight: 600;
+  color: white;
+
+}
+
+.profile-title {
+  margin: 0.25rem 0 1rem;
+  font-size: 2vh;
+  color: rgba(255, 255, 255, 0.562);
+
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 44px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f000;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.social-icon a {
+  width: 44px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.social-icon:hover {
+  background-color: #4070f4;
+  color: white;
+}
+
+
+
+
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  top: 5vh;
+  padding-right: 3vw;
+}
+
+.label {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 30vw;
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+

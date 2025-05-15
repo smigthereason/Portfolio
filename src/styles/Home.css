@@ -113,3 +113,9 @@
   }
 
 }
+@media (max-width: 768px) {
+  /* Hide the left section completely */
+  .left-section1 {
+    display: none;
+  }
+}

@@ -132,7 +132,7 @@ const Portfolio: React.FC = () => {
           >
             <LineHead title="portfolio" />
             <div className="portfolio">
-              <h1>From Concept to Reality: My Project Portfolio</h1>
+              <h1 className="portfolio-head">From Concept to Reality: My Project Portfolio</h1>
 
               <div className="timeline">
                 {experiences.map((exp, index) => (

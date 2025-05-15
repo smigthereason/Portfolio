@@ -5,7 +5,7 @@ nav {
   position: fixed;
   top: 0;
   width: 70vw;
-  background-color: rgba(255, 255, 255, 0); 
+  background-color: rgba(255, 255, 255, 0);
   z-index: 1000;
   padding: 0 20px;
   height: 120px;
@@ -48,16 +48,15 @@ nav {
   color: #fff;
 }
 
-.social-icons  {
+.social-icons {
   color: #fff;
   cursor: pointer;
-  font-size: 4vh
+  font-size: 4vh;
 }
 
 .social-icons svg:hover {
   transform: scale(1.5);
   transition: transform 0.2s ease-in-out;
-
 }
 
 .close {
@@ -68,12 +67,13 @@ nav {
 }
 
 .close a svg {
-  text-decoration: none; 
+  text-decoration: none;
   position: relative;
   top: 20px;
   left: 100px;
   color: #ebebeb;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .close a:hover svg {
@@ -93,20 +93,19 @@ nav {
 
 /* Larger screens, increase the space of the right section */
 @media (min-width: 1600px) {
-  .social-icons{
+  .social-icons {
     position: relative;
     top: 0vh;
   }
-  .social-icons svg  {
+  .social-icons svg {
     color: #fff;
     cursor: pointer;
     font-size: 4vh;
   }
-  
+
   .social-icons svg:hover {
     transform: scale(1.5);
     transition: transform 0.2s ease-in-out;
-  
   }
 }
 
@@ -130,5 +129,30 @@ nav {
 
   .other-content {
     top: 8vh; /* Adjust spacing */
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    width: 80vw;
+    z-index: 1000;
+    padding: 0 10px;
+  }
+
+  .top-nav {
+    width: 25vw;
+  }
+
+  .name {
+    font-size: 10vw;
+    margin-top: 4vh;
+    padding: 0;
+  }
+
+  .social-icons1 {
+    gap: 20px;
+  }
+
+  .social-icons {
+    font-size: 3.2vh;
   }
 }

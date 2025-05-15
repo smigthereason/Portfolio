@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="form-group full-width">
         <label>A Few Words*</label>
-        <textarea name="message" value={formData.message} onChange={handleChange} required></textarea>
+        <textarea className='text-words' name="message" value={formData.message} onChange={handleChange} required></textarea>
       </div>
       <button type="submit">Submit</button>
     </form>
