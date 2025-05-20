@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="left-section1">
+      <div className="left-section-1">
         <div className="close">
           <img src={Me2} alt="Me2" />
         </div>

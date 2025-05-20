@@ -15,8 +15,6 @@
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
   width: 100%;
-  max-width: 1200px;
-  padding: 20px;
   text-align: center;
 }
 
@@ -212,6 +210,11 @@
   }
 }
 @media (max-width: 768px) {
+ 
+  .contact_block {
+    margin-top: -5vh;
+    padding: 2vh;
+  }
   .section_block {
     position: relative;
     top: 10vw;
@@ -226,11 +229,14 @@
     align-items: center;
     gap: 20px;
   }
-  .card{
+  .card {
     width: 80vw;
-    padding: 10px; 
-    font-size: 1.5rem; 
-
+    padding: 10px;
+    font-size: 1.5rem;
   }
-  
+  .section_block h3 {
+    font-size: 3vh; 
+    padding: 0 2vw;
+    
+  }
 }

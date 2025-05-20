@@ -125,7 +125,7 @@ const Portfolio: React.FC = () => {
         <div className="right-section">
           <Header />
           <div
-            className="about-container"
+            className="portfolio-container"
             data-aos="fade-up"
             data-aos-duration="3000"
             data-aos-delay="0"

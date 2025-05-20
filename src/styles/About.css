@@ -5,10 +5,8 @@
   height: 100vh;
   width: 100%;
   margin-top: 100px;
-  padding: 0 0 10vw 0 ;
-
+  padding: 0 0 10vw 0;
 }
-
 
 .main-content {
   display: flex;
@@ -17,7 +15,7 @@
   align-items: center;
   margin-top: 15vh;
 }
-.tools{
+.tools {
   width: 50vw;
   font-size: 1.3rem;
   position: relative;
@@ -75,7 +73,7 @@
   flex-grow: 1;
   align-self: center;
   z-index: 1000;
-  margin-top: -150px; 
+  margin-top: -150px;
   position: relative;
   bottom: 120px;
 }
@@ -94,24 +92,24 @@
   /* Right box */
   order: 3;
   width: 40%;
-  margin-bottom: -350px; 
+  margin-bottom: -350px;
   position: relative;
   bottom: 385px;
   left: 425px;
 }
-.content1{
+.content1 {
   padding-left: 5vw;
-  padding-right: 5vw; 
+  padding-right: 5vw;
 }
 .center-text {
   font-size: 1.2rem;
   padding-left: 5vw;
   padding-right: 5vw;
 }
-.content6{
+.content6 {
   padding-bottom: 5vw;
 }
-.splide  {
+.splide {
   position: relative;
   bottom: 2vh;
   height: 100vh;
@@ -121,22 +119,21 @@
   justify-content: center; /* Centers the content horizontally */
   align-items: center;
 }
-.dev-icons{
+.dev-icons {
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.dev-icons img{
+.dev-icons img {
   position: relative;
   width: 25vw;
   height: 100vh;
   object-fit: contain;
 }
 
-
 .react-icon {
   font-size: 50vh; /* Adjust the size as needed */
-  color: #61DBFB; /* React's official color */
+  color: #61dbfb; /* React's official color */
   position: relative;
   width: 25vw;
   height: 100vh;
@@ -153,90 +150,88 @@
   }
 }
 
-  /* Responsive Design - Media Queries */
+/* Responsive Design - Media Queries */
 
 /* Larger screens, increase the space of the right section */
 @media (min-width: 1600px) {
-  .center-text{
+  .center-text {
     font-size: 1.5rem;
   }
   /* Positioning the boxes */
-.skills-section:nth-child(1) {
-  /* Main center box */
-  order: 2;
-  min-height: 350px; /* Adjust as needed */
-  flex-grow: 1;
-  align-self: center;
-  z-index: 1000;
-  margin-top: -150px; 
-  position: relative;
-  bottom: 120px;
-}
+  .skills-section:nth-child(1) {
+    /* Main center box */
+    order: 2;
+    min-height: 350px; /* Adjust as needed */
+    flex-grow: 1;
+    align-self: center;
+    z-index: 1000;
+    margin-top: -150px;
+    position: relative;
+    bottom: 120px;
+  }
 
-.skills-section:nth-child(2) {
-  /* Left box */
-  order: 1;
-  width: 60%;
-  height: 20vh;
-  margin-top: 80px;
-  position: relative;
-  right: 300px;
-  top: 50px;
-}
+  .skills-section:nth-child(2) {
+    /* Left box */
+    order: 1;
+    width: 60%;
+    height: 20vh;
+    margin-top: 80px;
+    position: relative;
+    right: 300px;
+    top: 50px;
+  }
 
-.skills-section:nth-child(3) {
-  /* Right box */
-  order: 3;
-  width: 60%;
-  height: 20vh;
-  margin-bottom: -350px; 
-  position: relative;
-  left: 450px;
-  bottom: 475px;
+  .skills-section:nth-child(3) {
+    /* Right box */
+    order: 3;
+    width: 60%;
+    height: 20vh;
+    margin-bottom: -350px;
+    position: relative;
+    left: 450px;
+    bottom: 475px;
+  }
+  .skills-section h2,
+  .skills-section h3 {
+    font-size: 3vh;
+    position: relative;
+    top: 2vh;
+  }
+  .skills-section p {
+    font-size: 5vh;
+  }
 }
-.skills-section h2,
-.skills-section h3 {
-  font-size: 3vh;
-  position: relative;
-  top: 2vh;
-}
-.skills-section p {
-  font-size: 5vh;
-}
-}
-
-
 
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     height: auto;
-    margin-top: 50px;
+    margin-top: 5vh;
     padding: 0 0 5vw 0;
   }
-  
+
   .main-content {
     margin-top: 15vh;
     gap: 5px;
     width: 100%;
   }
-  
+
   .tools {
     width: 90vw;
     font-size: 1rem;
     top: 2vh;
   }
-  
+
   .skills-container {
     padding: 10px;
     width: 100%;
   }
-  
+
   .skills-box {
     width: 95%;
     max-width: none;
   }
-  
+
   /* Reset the complex positioning for mobile */
   .skills-section {
     width: 80% !important;
@@ -261,7 +256,7 @@
     bottom: 0 !important;
     top: 0 !important;
   }
-  
+
   .skills-section:nth-child(3) {
     margin: 10px 0 !important;
     padding: 15px !important;
@@ -270,23 +265,23 @@
     order: unset !important;
     left: 5vw !important;
   }
-  
+
   .center-text {
     font-size: 1.2rem;
     padding-left: 3vw;
     padding-right: 3vw;
   }
-  
+
   .splide {
     height: 50vh;
     bottom: 0;
   }
-  
+
   .dev-icons img {
     width: 50vw;
     height: 50vh;
   }
-  
+
   .react-icon {
     font-size: 30vh;
     width: 50vw;
@@ -300,13 +295,13 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .content6 h3.center-text {
     font-size: 1.2rem;
     margin-bottom: 10px;
     text-align: center;
   }
-  
+
   .content6 p.center-text {
     width: 100%;
     display: flex;
@@ -314,13 +309,12 @@
     padding: 0;
     margin: 0;
   }
-  
+
   .content6 img {
     width: 90%;
     max-width: 450px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-
 }

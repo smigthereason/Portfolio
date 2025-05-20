@@ -86,6 +86,9 @@ body {
 
 /* For mobile devices - below 768px */
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden !important;
+  }
   /* Hide the left section completely */
   .left-section {
     display: none;

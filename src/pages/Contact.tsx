@@ -85,8 +85,8 @@ const Contact: React.FC = () => {
             <LineHead title="Contact" />
             <div className="section_block">
               <div className="sub_title">
-                <h3 className="section_title">
-                Let's Connect: Reach Out and Get in Touch
+                <h3 className="section-title">
+                Let's Connect: <br/> Reach Out and Get in Touch
                 </h3>
               </div>
               <div className="cards-container">

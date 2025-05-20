@@ -4,7 +4,7 @@ import '../styles/Button.css';
 const Button: React.FC = () => {
   const handleClick = () => {
     // Open the Google Drive link in a new tab for file download
-    window.open('https://drive.google.com/file/d/1S1aD81PbMXYTpKn80jLqKqFTGd5Hy1q0/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1BwzNdgpYjqxiKSInQMglt412stTgS5Lv/view?usp=sharing', '_blank');
   };
 
   return (
