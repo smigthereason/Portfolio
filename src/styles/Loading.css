@@ -1,121 +1,119 @@
-/* Loading.css */
 .loading-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  color: #130219;
-}
-
-
-h6 {
-  position: relative;
-  bottom: 15vh;
-  font-size: 4rem;
-  font-weight: bold;
-  font-family: "Italianno", cursive;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #130219;
 }
 
 /* Circular container that holds the water */
 .loading-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.733);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.733);
+
+    /* Flexbox to center the Welcome text perfectly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+h6.Welcome {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem; /* Slightly reduced to fit better in a 200px circle */
+    font-weight: bold;
+    font-family: "Italianno", cursive;
+    z-index: 20;
+    text-align: center;
+    pointer-events: none; /* Ensures text doesn't interfere with animations */
 }
 
 /* Water inside the circle */
 .water {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.61) 0%,
-    rgba(255, 255, 255, 0.589) 50%,
-    rgba(102, 52, 219, 0.8) 100%
-  );
-  transform: translate(0, 100%);
-  filter: url(#turbulence);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.61) 0%,
+        rgba(255, 255, 255, 0.589) 50%,
+        rgba(102, 52, 219, 0.8) 100%
+    );
+    transform: translate(0, 100%);
+    filter: url(#turbulence);
+    z-index: 5;
 }
 
 /* Pouring animation for the water */
 .water.pouring {
-  animation: fill-up 3.5s ease-in-out forwards, wave 3s linear infinite;
+    animation:
+        fill-up 3.5s ease-in-out forwards,
+        wave 3s linear infinite;
 }
 
-/* Fills the container up to 100%, but stops briefly at 80% */
 @keyframes fill-up {
-  0% {
-    height: 0;
-    transform: translate(0, 100%);
-  }
-  80% {
-    height: 80%;
-    transform: translate(0, 20%);
-  }
-  100% {
-    height: 100%;
-    transform: translate(0, 0);
-  }
+    0% {
+        height: 0;
+        transform: translate(0, 100%);
+    }
+    80% {
+        height: 80%;
+        transform: translate(0, 20%);
+    }
+    100% {
+        height: 100%;
+        transform: translate(0, 0);
+    }
 }
 
-/* Wave effect to simulate liquid movement */
 @keyframes wave {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(-25%) translateY(-5px);
-  }
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-25%) translateY(-5px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
-/* Bubbles inside the water */
 .bubble {
-  position: absolute;
-  bottom: 5px;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  opacity: 0.4;
-  animation: rise 4s ease-in infinite;
+    position: absolute;
+    bottom: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: rise 4s ease-in infinite;
 }
 
-/* Animation for bubbles rising */
 @keyframes rise {
-  0% {
-    transform: translateY(0) translateX(-20%) scale(0.8);
-    opacity: 0.2;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-  50% {
-    transform: translateY(100%) translateX(-50%) scale(1.2);
-    opacity: 1;
-    bottom: 50%;
-  }
-  100% {
-    transform: translateY(200%) translateX(-100%) scale(0.6);
-    opacity: 0.5;
-    bottom: 100%;
-  }
+    0% {
+        transform: translateY(0) translateX(-20%) scale(0.8);
+        opacity: 0.2;
+        bottom: 0;
+    }
+    50% {
+        transform: translateY(-50px) translateX(-50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-100%) scale(0.6);
+        opacity: 0;
+    }
 }
-@media (max-width: 1600px) {
-h6 {
-  position: relative;
-  bottom: 10vh;
-  
-}
-}
+
+/* Removed the media query pushing h6 away from center */

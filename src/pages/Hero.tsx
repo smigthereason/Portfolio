@@ -1,53 +1,4 @@
-// import React, { useEffect } from "react";
-// import "/src/styles/Hero.css";
-// import { FaRegCopyright } from "react-icons/fa";
-// import { Link } from "react-router-dom";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import Me from "../assets/06.jpg"
-
-// const Hero: React.FC = () => {
-//   useEffect(() => {
-//     AOS.init({
-//       duration: 1000,
-//       once: true,
-//     });
-//   }, []);
-
-//   return (
-//     <div className="hero-container" data-aos="zoom-out">
-//       <div className="left-section">
-//         <img src={Me} alt="Me" />
-//       </div>
-//       <div className="right-section-hero">
-
-//         <div className="content-section">
-//           <div className="vertical-links">
-//             <Link to="/home" data-aos="fade-up" data-aos-delay="100">Home</Link>
-//             <Link to="/about" data-aos="fade-up" data-aos-delay="200">About</Link>
-//             <Link to="/portfolio" data-aos="fade-up" data-aos-delay="300">Portfolio</Link>
-//             <Link to="/contact" data-aos="fade-up" data-aos-delay="400">Contact</Link>
-//           </div>
-//           <div className="other-content" data-aos="fade-in" data-aos-delay="500">
-//             <p>P.O.Box 25773-00100 NBI,GPO</p>
-//             <p><a href="mailto:victor.dmaina@gmail.com">victor.dmaina@gmail.com</a></p>
-//             <p>+254 707 098723</p>
-//             <p>+254 704 542321</p>
-//           </div>
-//         </div>
-//         <div className="tag-1">
-//           <h2>Victor Maina <FaRegCopyright /> 2024 </h2>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hero;
-
-import React, { useEffect, useState } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { useEffect } from "react";
 import { FaRegCopyright } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -55,22 +6,11 @@ import Me from "../assets/09.jpeg";
 import Me2 from "../assets/06.jpg";
 import { Link } from "react-router-dom";
 
-// Import Hero CSS that includes mobile styles
-import "/src/styles/Hero.css";
-
-interface LabelProps {
-  title: string;
-}
-
-const Label: React.FC<LabelProps> = ({ title }) => (
-  <div className="label">
-    <h2>{title}</h2>
-  </div>
-);
+import "../styles/Hero.css";
+// Make sure HeroMobile.css doesn't override your styles
+// import "../styles/HeroMobile.css"; // Comment this out if it's causing conflicts
 
 const Hero = () => {
-  const [] = useState("projects");
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -80,14 +20,17 @@ const Hero = () => {
 
   return (
     <>
-      {/* Desktop Hero Component - Your original Hero component can go here */}
+      {/* Desktop Version */}
       <div className="desktop-hero-container">
-        {/* Your desktop hero content */}
         <div className="hero-container" data-aos="zoom-out">
           <div className="left-section">
-            <img src={Me2} alt="Me" />
+            <img src={Me2} alt="Victor Maina" />
           </div>
           <div className="right-section-hero">
+            {/* Add video background here if needed */}
+            <video autoPlay loop muted playsInline className="background-video">
+              <source src="/path-to-your-video.mp4" type="video/mp4" />
+            </video>
             <div className="content-section">
               <div className="vertical-links">
                 <Link to="/home" data-aos="fade-up" data-aos-delay="100">
@@ -103,6 +46,7 @@ const Hero = () => {
                   Contact
                 </Link>
               </div>
+
               <div
                 className="other-content"
                 data-aos="fade-in"
@@ -114,73 +58,59 @@ const Hero = () => {
                     victor.dmaina@gmail.com
                   </a>
                 </p>
-                <p>+254 707 098723</p>
-                <p>+254 704 542321</p>
+                <div className="aligned-phones">
+                  <p>+254 707 098 723</p>
+                  <p>+254 704 542 321</p>
+                </div>
               </div>
             </div>
             <div className="tag-1">
               <h2>
-                Victor Maina <FaRegCopyright /> 2024{" "}
+                Victor Maina <FaRegCopyright /> 2024
               </h2>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Hero Component */}
+      {/* Mobile Version - Image above content, only video background */}
       <div className="mobile-hero-container">
-        <div className="profile-card" data-aos="fade-up">
-          <div className="profile-image-container">
-            <img src={Me} alt="Me" className="profile-image" />
+        {/* Video background for mobile */}
+        <video autoPlay loop muted playsInline className="background-video">
+          <source src="/path-to-your-video.mp4" type="video/mp4" />
+        </video>
+
+        <div className="mobile-flow-wrapper" data-aos="fade-up">
+          {/* Image at the top */}
+          <div className="mobile-image-box">
+            <img src={Me} alt="Victor Maina" />
           </div>
 
-          <div className="profile-info">
-            <h2 className="profile-name">Victor Maina</h2>
-            <p className="profile-title">Web Developer</p>
+          {/* Content below image */}
+          <div className="mobile-content-box">
+            <div className="vertical-links">
+              <Link to="/home">Home</Link>
+              <Link to="/about">About</Link>
+              <Link to="/portfolio">Portfolio</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
 
-            <div className="social-links">
-              <div className="social-links">
-                <a
-                  href="https://www.linkedin.com/in/victor-dmaina/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icons"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="mailto:victor.dmaina@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icons"
-                >
-                  <MdEmail />
-                </a>
-                <a
-                  href="https://github.com/smigthereason"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icons"
-                >
-                  <FaGithub />
-                </a>
+            <div className="other-content">
+              <p>P.O.Box 25773-00100 NBI,GPO</p>
+              <a href="mailto:victor.dmaina@gmail.com">
+                victor.dmaina@gmail.com
+              </a>
+              <div className="aligned-phones">
+                <p>+254 707 098 723</p>
+                <p>+254 704 542 321</p>
               </div>
             </div>
-          </div>
 
-          <div className="profile-tabs" data-aos="fade-up" data-aos-delay="600">
-            <Link to="/home" data-aos="fade-up" data-aos-delay="100">
-              <Label title="Home" />
-            </Link>
-            <Link to="/about" data-aos="fade-up" data-aos-delay="200">
-              <Label title="About" />
-            </Link>
-            <Link to="/portfolio" data-aos="fade-up" data-aos-delay="300">
-              <Label title="Portfolio" />
-            </Link>
-            <Link to="/contact" data-aos="fade-up" data-aos-delay="400">
-              <Label title="Contact" />
-            </Link>
+            <div className="tag-1">
+              <h2>
+                Victor Maina <FaRegCopyright /> 2024
+              </h2>
+            </div>
           </div>
         </div>
       </div>
