@@ -70,6 +70,18 @@ const About: React.FC = () => {
                       alt="React"
                     />
                     <img
+                      src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
+                      alt="React Native"
+                    />
+                    <img
+                      src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
+                      alt="Angular"
+                    />
+                    <img
+                      src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"
+                      alt="Next.js"
+                    />
+                    <img
                       src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node-dot-js&logoColor=white"
                       alt="Node.js"
                     />
