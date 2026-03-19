@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 
+/* ─── Layout ──────────────────────────────────────────────────────────────── */
 .about-container {
   display: flex;
   height: 100vh;
@@ -15,6 +16,7 @@
   align-items: center;
   margin-top: 15vh;
 }
+
 .tools {
   width: 50vw;
   font-size: 1.3rem;
@@ -22,12 +24,13 @@
   top: 4vh;
 }
 
+/* ─── Skills ──────────────────────────────────────────────────────────────── */
 .skills-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2vw;
-  flex-wrap: wrap; /* Allows items to wrap within the container */
+  flex-wrap: wrap;
 }
 
 .skills-box {
@@ -65,11 +68,9 @@
   height: 28px;
 }
 
-/* Positioning the boxes */
 .skills-section:nth-child(1) {
-  /* Main center box */
   order: 2;
-  min-height: 250px; /* Adjust as needed */
+  min-height: 250px;
   flex-grow: 1;
   align-self: center;
   z-index: 1000;
@@ -79,17 +80,14 @@
 }
 
 .skills-section:nth-child(2) {
-  /* Left box */
   order: 1;
   width: 40%;
-  margin-top: 80px; /* Push the left box down */
   margin-top: 80px;
   position: relative;
   right: 190px;
 }
 
 .skills-section:nth-child(3) {
-  /* Right box */
   order: 3;
   width: 40%;
   margin-bottom: -350px;
@@ -97,224 +95,409 @@
   bottom: 385px;
   left: 425px;
 }
+
+/* ─── Resume ──────────────────────────────────────────────────────────────── */
+.resume-details {
+  margin-top: 40px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
 .content1 {
   padding-left: 5vw;
   padding-right: 5vw;
 }
+
 .center-text {
   font-size: 1.2rem;
   padding-left: 5vw;
   padding-right: 5vw;
 }
+
 .content6 {
   padding-bottom: 5vw;
 }
+
+/* ─── Splide & Icons ──────────────────────────────────────────────────────── */
 .splide {
   position: relative;
   bottom: 2vh;
-  height: 100vh;
+  height: 50vh;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
+  justify-content: center;
   align-items: center;
 }
+
 .dev-icons {
   width: 100%;
   padding: 0;
   margin: 0;
 }
+
 .dev-icons img {
   position: relative;
   width: 25vw;
-  height: 100vh;
+  height: 50vh;
   object-fit: contain;
 }
 
 .react-icon {
-  font-size: 50vh; /* Adjust the size as needed */
-  color: #61dbfb; /* React's official color */
+  font-size: 30vh;
+  color: #61dbfb;
   position: relative;
   width: 25vw;
-  height: 100vh;
-  transform: translate(-50%, -50%); /* Center the icon */
-  animation: spin 5s linear infinite; /* Optional: spin animation */
+  height: 50vh;
+  animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design - Media Queries */
+/* ═══════════════════════════════════════════════════════════════════════════
+   SOCIAL SECTION  (AI-designed styles)
+═══════════════════════════════════════════════════════════════════════════ */
 
-/* Larger screens, increase the space of the right section */
+.social-section-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  
+}
+
+.social-section-title {
+  
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(190, 147, 230, 0.4);
+}
+
+/* ─── Platform Blocks ────────────────────────────────────────────────────── */
+.social-platform {
+  background: rgba(19, 2, 25, 0.6);
+  border: 1px solid rgba(190, 147, 230, 0.2);
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+  
+}
+
+.social-platform:hover {
+  transform: translateY(-5px);
+  border-color: rgba(190, 147, 230, 0.4);
+}
+
+.social-platform-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  
+}
+
+.social-icon { font-size: 2.5rem; }
+.yt-icon     { color: #ff0000; }
+.sc-icon     { color: #ff5500; }
+
+.social-platform-header span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  
+}
+
+.social-view-all {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  
+}
+
+.social-view-all:hover {
+  background: #fff;
+  color: #130219;
+}
+
+/* ─── Channel Promo Buttons ──────────────────────────────────────────────── */
+.channel-promo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.channel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 40px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: 2px solid #be93e6;
+  color: #fff;
+  background: transparent;
+}
+
+.youtube-button:hover {
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.soundcloud-button { border-color: #ff5500; }
+.soundcloud-button:hover {
+  background: rgba(255, 85, 0, 0.2);
+  box-shadow: 0 0 20px #ff5500;
+}
+
+/* ─── YouTube Cards ───────────────────────────────────────────────────────── */
+.media-cards-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 15px 5px 25px;
+  scrollbar-width: thin;
+  scrollbar-color: #baaebe rgba(255, 255, 255, 0.1);
+  scroll-behavior: smooth;
+  
+}
+
+.media-cards-row::-webkit-scrollbar        { height: 8px; }
+.media-cards-row::-webkit-scrollbar-track  { background: rgba(255,255,255,0.1); border-radius: 10px; }
+.media-cards-row::-webkit-scrollbar-thumb  {
+  background: linear-gradient(90deg, #baaebe, #9a8a9e);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.media-cards-row::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #9a8a9e, #7a6a7e);
+}
+
+.media-card {
+  flex: 0 0 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.media-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.media-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.media-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.media-card:hover .media-card-thumb img { transform: scale(1.15); }
+
+.media-card-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(3px);
+}
+
+.media-card:hover .media-card-play { opacity: 1; }
+
+.media-card-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.media-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #fff;
+  min-height: 2.8em;
+}
+
+.media-card-date {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: auto;
+}
+
+/* ─── SoundCloud Embed ────────────────────────────────────────────────────── */
+.sc-embed-container {
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 2px solid rgba(255, 85, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sc-embed-container:hover {
+  border-color: #ff5500;
+  box-shadow: 0 10px 30px rgba(255, 85, 0, 0.2);
+}
+
+.sc-iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* ─── Loading / Error States ──────────────────────────────────────────────── */
+.social-loading {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.loading-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #baaebe, #764ba2);
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+  40%            { transform: scale(1); opacity: 1; }
+}
+
+.social-error {
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 80, 80, 0.1);
+  border: 2px solid rgba(255, 80, 80, 0.3);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-error a      { color: inherit; text-decoration: underline; }
+.social-error-hint   { margin-top: 15px; opacity: 0.75; }
+
+/* ─── Large screens ───────────────────────────────────────────────────────── */
 @media (min-width: 1600px) {
-  .center-text {
-    font-size: 1.5rem;
-  }
-  /* Positioning the boxes */
+  .center-text { font-size: 1.5rem; }
+
   .skills-section:nth-child(1) {
-    /* Main center box */
-    order: 2;
-    min-height: 350px; /* Adjust as needed */
-    flex-grow: 1;
-    align-self: center;
-    z-index: 1000;
-    margin-top: -150px;
-    position: relative;
-    bottom: 120px;
+    order: 2; min-height: 350px; flex-grow: 1; align-self: center;
+    z-index: 1000; margin-top: -150px; position: relative; bottom: 120px;
   }
-
   .skills-section:nth-child(2) {
-    /* Left box */
-    order: 1;
-    width: 60%;
-    height: 20vh;
-    margin-top: 80px;
-    position: relative;
-    right: 300px;
-    top: 50px;
+    order: 1; width: 60%; height: 20vh; margin-top: 80px;
+    position: relative; right: 300px; top: 50px;
   }
-
   .skills-section:nth-child(3) {
-    /* Right box */
-    order: 3;
-    width: 60%;
-    height: 20vh;
-    margin-bottom: -350px;
-    position: relative;
-    left: 450px;
-    bottom: 475px;
+    order: 3; width: 60%; height: 20vh; margin-bottom: -350px;
+    position: relative; left: 450px; bottom: 475px;
   }
   .skills-section h2,
-  .skills-section h3 {
-    font-size: 3vh;
-    position: relative;
-    top: 2vh;
-  }
-  .skills-section p {
-    font-size: 5vh;
-  }
+  .skills-section h3 { font-size: 3vh; position: relative; top: 2vh; }
+
+  .media-card { flex: 0 0 280px; }
+  .social-section-container { max-width: 1400px; }
 }
 
+/* ─── Mobile ──────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .about-container {
-    flex-direction: column;
-    height: auto;
-    margin-top: 5vh;
-    padding: 0 0 5vw 0;
+    flex-direction: column; height: auto; margin-top: 5vh; padding: 0 0 5vw 0;
   }
-
-  .main-content {
-    margin-top: 15vh;
-    gap: 5px;
-    width: 100%;
-  }
-
-  .tools {
-    width: 90vw;
-    font-size: 1rem;
-    top: 2vh;
-  }
-
-  .skills-container {
-    padding: 10px;
-    width: 100%;
-  }
-
-  .skills-box {
-    width: 95%;
-    max-width: none;
-  }
-
-  /* Reset the complex positioning for mobile */
+  .main-content  { margin-top: 15vh; gap: 5px; width: 100%; }
+  .tools         { width: 90vw; font-size: 1rem; top: 2vh; }
+  .skills-container { padding: 10px; width: 100%; }
+  .skills-box    { width: 95%; max-width: none; }
   .skills-section {
-    width: 80% !important;
-    position: static !important;
-    order: unset !important;
-    margin: 10px 0 !important;
-    padding: 15px !important;
-    right: 0 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    top: 0 !important;
+    width: 80% !important; position: static !important;
+    order: unset !important; margin: 10px 0 !important; padding: 15px !important;
   }
-  .skills-section:nth-child(2) {
-    /* Left box */
-    width: 80% !important;
-    position: relative !important;
-    order: unset !important;
-    margin: 10px 0 !important;
-    padding: 15px !important;
-    right: 0 !important;
-    left: 5vw !important;
-    bottom: 0 !important;
-    top: 0 !important;
-  }
+  .resume-details { width: 90%; }
+  .splide         { height: 40vh; bottom: 0; }
+  .dev-icons img  { width: 60vw; height: 40vh; }
+  .react-icon     { font-size: 20vh; width: 60vw; height: 40vh; transform: none; }
+  .content1       { padding-left: 15px; padding-right: 15px; }
+  .center-text    { font-size: 1rem; padding-left: 15px; padding-right: 15px; }
 
-  .skills-section:nth-child(3) {
-    margin: 10px 0 !important;
-    padding: 15px !important;
-    width: 80% !important;
-    position: relative !important;
-    order: unset !important;
-    left: 5vw !important;
-  }
+  /* Social mobile */
+  .social-section-container  { padding: 25px 15px; margin: 40px auto; }
+  .social-section-title      { font-size: 2.5rem; margin-bottom: 30px; }
+  .social-platform           { padding: 25px; border-radius: 20px; }
+  .social-platform-header    { flex-wrap: wrap; gap: 10px; }
+  .social-platform-header span { font-size: 1.2rem; }
+  .social-view-all           { margin-left: 0; width: 100%; text-align: center; }
+  .channel-button            { width: 100%; min-width: auto; padding: 12px 20px; font-size: 1rem; }
+  .media-cards-row           { gap: 15px; }
+  .media-card                { flex: 0 0 160px; }
+  .media-card-title          { font-size: 0.8rem; min-height: 2.4em; }
+}
 
-  .center-text {
-    font-size: 1.2rem;
-    padding-left: 3vw;
-    padding-right: 3vw;
-  }
-
-  .splide {
-    height: 50vh;
-    bottom: 0;
-  }
-
-  .dev-icons img {
-    width: 50vw;
-    height: 50vh;
-  }
-
-  .react-icon {
-    font-size: 30vh;
-    width: 50vw;
-    height: 50vh;
-    transform: none;
-  }
-  .content6 {
-    width: 100%;
-    padding-bottom: 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content6 h3.center-text {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .content6 p.center-text {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  .content6 img {
-    width: 90%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+/* ─── Small Mobile ───────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .media-card       { flex: 0 0 140px; }
+  .media-card-info  { padding: 10px; }
+  .media-card-title { font-size: 0.75rem; }
+  .media-card-date  { font-size: 0.65rem; }
+  .social-platform-header svg  { font-size: 1.8rem; }
+  .social-platform-header span { font-size: 1.1rem; }
+  .channel-button   { font-size: 0.9rem; padding: 10px 15px; }
 }
